@@ -90,13 +90,12 @@
 			  <table class="table">
 				<tr  class="info">
 					
-					<th class='text-tight'>Documento</th>
+					<th class='text-tight'>Dni</th>
 					<th class='text-tight'>Jugador</th>
 					<th class='text-tight'>Año de Nac.</th>
 					<th class='text-tight'>Direccion</th>
 					<th class='text-tight'>Telefono</th>
 					<th class='text-tight'>Documentacion</th>
-					<th class='text-tight'>Categoria</th>
 					<th class='text-tight'>Club</th>
 					<th><span class="pull-right">Acciones</span></th>
 					
@@ -106,13 +105,13 @@
 						$id=$row['ID'];
 						$dni=$row['DNI'];
 						$jugador=$row['APELLIDO_Y_NOMBRE'];
-					$nacimiento=date('d/m/Y', strtotime($row['FECHA']));
+					    $nacimiento=$row['FECHA'];
 						$direccion=$row['DIRECCION'];
 						$telefono=$row['TELEFONO'];
 						$documentacion=$row['DOCUMENTACION'];
-						$categoria=$row['CATEGORIA'];
-						$club=$row['CLUB'];
-						
+					    $club=$row['CLUB'];
+						$historial=$row['HISTORIAL_MEDICO'];
+					    $correo=$row['CORREO'];
 						
 						
 					?>
@@ -127,7 +126,8 @@
 					<input type="hidden" value="<?php echo $row['OBRA_SOCIAL'];?>" id="social<?php echo $id;?>">
 					<input type="hidden" value="<?php echo $row['DIRECCION'];?>" id="direccion<?php echo $id;?>">
 					<input type="hidden" value="<?php echo $row['TELEFONO'];?>" id="telefono<?php echo $id;?>">
-					<input type="hidden" value="<?php echo $row['CATEGORIA'];?>" id="categoria<?php echo $id;?>">
+					<input type="hidden" value="<?php echo $row['CORREO'];?>" id="correo<?php echo $id;?>">
+					<input type="hidden" value="<?php echo $row['HISTORIAL_MEDICO'];?>" id="historial<?php echo $id;?>">
 					
 					<tr>
 					
@@ -137,7 +137,6 @@
 					<td class='text-tight'><?php echo $direccion;?></td>
 					<td class='text-tight'><?php echo $telefono;?></td>
 					<td class='text-tight'><?php echo $documentacion;?></td>
-					<td class='text-tight'><?php echo $categoria;?></td>
 					<td class='text-tight'><?php echo $club;?></td>
 						
 						<td ><span class="pull-right">

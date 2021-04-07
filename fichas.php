@@ -32,7 +32,7 @@
 		<div class="panel panel-info">
 		<div class="panel-heading">
 		  <div class="btn-group pull-right">
-				<button type='button' class="btn btn-primary" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus" ></span> Carga Fichas</button>
+				<button type='button' class="btn btn-primary" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus" ></span> Cargar Fichajes</button>
 			</div>
 			<h4><i class='glyphicon glyphicon-list'></i> Listado de Jugadores Fichados</h4>
 		</div>
@@ -45,7 +45,7 @@
 				<form class="form-horizontal" role="form" id="datos_fichas">
 				
 						<div class="form-group row">
-							<label for="q" class="col-md-2 control-label">Fichas</label>
+							<label for="q" class="col-md-2 control-label">Fichajes</label>
 							<div class="col-md-5">
 								<input type="text" class="form-control" id="q"  placeholder="Apellido" onkeyup='load(1);'>
 							</div>

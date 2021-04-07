@@ -28,7 +28,7 @@
     <div class="container">
 	<div class="panel panel-info">
 		<div class="panel-heading">
-			<h4><i class='glyphicon glyphicon-edit'></i> Reporte Planilla de Registros</h4>
+			<h4><i class='glyphicon glyphicon-edit'></i> Reporte de Gastos</h4>
 		</div>
 		<div class="panel-body">
 		<?php 

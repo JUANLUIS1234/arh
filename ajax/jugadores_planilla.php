@@ -14,7 +14,7 @@
 	if($action == 'ajax'){
 		//escapar, además de eliminar todo lo que podría ser código (html / javascript-)
          $q = mysqli_real_escape_string($con,(strip_tags($_REQUEST['q'], ENT_QUOTES)));
-		 $aColumns = array('dni', 'apellido_y_nombre');//Columnas de busqueda
+		 $aColumns = array('DNI', 'APELLIDO_Y_NOMBRE');//Columnas de busqueda
 		 $sTable = "jugadores";
 		 $sWhere = "";
 		 $ano = date("Y");

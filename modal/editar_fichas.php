@@ -53,7 +53,7 @@
 			  <div class="form-group">
 				<label for="monto2" class="col-sm-3 control-label">Monto</label>
 				<div class="col-sm-8">
-				  <input type="text" class="form-control" id="monto2" name="monto2" placeholder="Monto" >
+				  <input type="text" class="form-control" id="monto2" name="monto2" placeholder="Monto">
 				</div>
 			  </div>
 			 <div class="form-group">

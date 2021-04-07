@@ -27,9 +27,9 @@
 				</div>
 			  </div>
 			  <div class="form-group">
-				<label for="fecha2" class="col-sm-3 control-label">Fecha de Nacimiento</label>
+				<label for="fecha2" class="col-sm-3 control-label">Año de Nac.</label>
 				<div class="col-sm-8">
-				  <input style="background-color: lightgray" type="date" class="form-control" id="fecha2" name="fecha2" value="Y" >
+				  <input type="text" class="form-control" id="fecha2" name="fecha2" >
 				</div>
 			  </div>
 			  
@@ -76,12 +76,7 @@
 				  <input type="text" class="form-control" id="documentacion2" name="documentacion2" placeholder="Documentacion" >
 				</div>
 			  </div>		 
-			<div class="form-group">
-				<label for="categoria2" class="col-sm-3 control-label">Categoria</label>
-				<div class="col-sm-8">
-				  <input type="text" class="form-control" id="categoria2" name="categoria2" placeholder="Categoria" >
-				</div>
-			  </div>
+			
 			  <div class="form-group">
 				<label for="club2" class="col-sm-3 control-label">Club</label>
 				<div class="col-sm-8">

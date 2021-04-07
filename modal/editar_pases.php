@@ -16,7 +16,7 @@
 			<div class="form-group">
 				<label for="dni2" class="col-sm-3 control-label">Documento</label>
 				<div class="col-sm-8">
-				  <input  type="text" class="form-control" id="dni2" name="dni2" placeholder="Dni" readonly="">
+				  <input  type="text" class="form-control" id="dni2" name="dni2" placeholder="Dni">
 				  <input type="hidden" id="mod_id" name="mod_id">
 				</div>
 			  </div>
@@ -29,7 +29,7 @@
 			  <div class="form-group">
 				<label for="fecha2" class="col-sm-3 control-label">Fecha </label>
 				<div class="col-sm-8">
-				  <input style="background-color: lightgray" type="date" class="form-control" id="fecha2" name="fecha2" value="Y" readonly="">
+				  <input style="background-color: lightgray" type="text" class="form-control" id="fecha2" name="fecha2"  readonly="">
 				</div>
 			  </div>
 			  

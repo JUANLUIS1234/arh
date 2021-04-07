@@ -72,7 +72,7 @@
 							</div>
 							<label for="fecha" class="col-md-1 control-label">Fecha</label>
 							<div class="col-md-2">
-								<input type="text" class="form-control input-sm" id="fecha" name="fecha" value="<?php echo date("Y-m-d");?>" readonly>
+								<input type="text" class="form-control input-sm" id="fecha" name="fecha" value="<?php echo date("d-m-Y");?>" readonly>
 							</div>
 							<label for="monto" class="col-md-1 control-label">Monto</label>
 							 <div class="col-md-3">
@@ -86,7 +86,7 @@
 					<div class="pull-right">
 						
 						<button type="submit" class="btn btn-warning" id="guardar_datos">
-						 <span class="glyphicon glyphicon-search"></span> Pases jugadores
+						 <span class="glyphicon glyphicon-save"></span> Transferir
 						</button>
 						<button type="submit" class="btn btn-success">
 						  <span class="glyphicon glyphicon-print"></span> Imprimir

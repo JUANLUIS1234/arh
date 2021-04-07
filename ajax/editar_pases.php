@@ -24,8 +24,7 @@ if (version_compare(PHP_VERSION, '5.3.7', '<')) {
 				// escaping, additionally removing everything that could be (html/javascript-) code
                 $dni = mysqli_real_escape_string($con,(strip_tags($_POST["dni2"],ENT_QUOTES)));
 				$nombre = mysqli_real_escape_string($con,(strip_tags($_POST["nombre2"],ENT_QUOTES)));
-				             
-              $id=intval($_POST['mod_id']);
+				$id=intval($_POST['mod_id']);
                     
 					
                	// Escribe el nuevo registro

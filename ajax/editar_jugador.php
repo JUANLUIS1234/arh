@@ -28,9 +28,7 @@ if (version_compare(PHP_VERSION, '5.3.7', '<')) {
             $errors[] = "correo vacío";
         }  elseif (empty($_POST['documentacion2'])) {
             $errors[] = "documentacion vacío";
-        }  elseif (empty($_POST['categoria2'])) {
-            $errors[] = "categoria vacío";
-}  elseif (empty($_POST['club2'])) {
+        }  elseif (empty($_POST['club2'])) {
             $errors[] = "club vacío";
         } elseif (
             !empty($_POST['dni2'])
@@ -43,7 +41,6 @@ if (version_compare(PHP_VERSION, '5.3.7', '<')) {
             && !empty($_POST['historial2']) 
             && !empty($_POST['correo2'])
             && !empty($_POST['documentacion2'])
-            && !empty($_POST['categoria2'])  
             && !empty($_POST['club2'])  
           ){ 
             require_once ("../config/db.php");//Contiene las variables de configuracion para conectar a la base de datos
@@ -53,26 +50,24 @@ if (version_compare(PHP_VERSION, '5.3.7', '<')) {
                 $dni = mysqli_real_escape_string($con,(strip_tags($_POST["dni2"],ENT_QUOTES)));
 				$nombre = mysqli_real_escape_string($con,(strip_tags($_POST["nombre2"],ENT_QUOTES)));
 				$fecha = mysqli_real_escape_string($con,(strip_tags($_POST["fecha2"],ENT_QUOTES)));
-                 $provincia = mysqli_real_escape_string($con,(strip_tags($_POST["provincia2"],ENT_QUOTES)));
+                $provincia = mysqli_real_escape_string($con,(strip_tags($_POST["provincia2"],ENT_QUOTES)));
 				$direccion = mysqli_real_escape_string($con,(strip_tags($_POST["direccion2"],ENT_QUOTES)));
 				$social = mysqli_real_escape_string($con,(strip_tags($_POST["social2"],ENT_QUOTES)));
-               $telefono = mysqli_real_escape_string($con,(strip_tags($_POST["telefono2"],ENT_QUOTES)));
+                $telefono = mysqli_real_escape_string($con,(strip_tags($_POST["telefono2"],ENT_QUOTES)));
 				$historial = mysqli_real_escape_string($con,(strip_tags($_POST["historial2"],ENT_QUOTES)));
 				$correo = mysqli_real_escape_string($con,(strip_tags($_POST["correo2"],ENT_QUOTES)));
                 $documentacion = mysqli_real_escape_string($con,(strip_tags($_POST["documentacion2"],ENT_QUOTES)));
-               $categoria = mysqli_real_escape_string($con,(strip_tags($_POST["categoria2"],ENT_QUOTES)));
                 $club = mysqli_real_escape_string($con,(strip_tags($_POST["club2"],ENT_QUOTES)));
-               
-              $id=intval($_POST['mod_id']);
+                $id=intval($_POST['mod_id']);
                     
 					
                	// Escribe el nuevo registro
-            $sql = "UPDATE jugadores SET DNI='".$dni."', APELLIDO_Y_NOMBRE='".$nombre."' , FECHA='" . $fecha . "', PROVINCIA='" . $provincia . "', DIRECCION='".$direccion."', OBRA_SOCIAL='".$social."', TELEFONO='".$telefono."', HISTORIAL_MEDICO='" . $historial . "', CORREO='" . $correo . "', DOCUMENTACION='" . $documentacion . "', CATEGORIA='".$categoria."', CLUB='" . $club . "'WHERE ID='".$id."';";
+            $sql = "UPDATE jugadores SET DNI='".$dni."', APELLIDO_Y_NOMBRE='".$nombre."' , FECHA='" . $fecha . "', PROVINCIA='" . $provincia . "', DIRECCION='".$direccion."', OBRA_SOCIAL='".$social."', TELEFONO='".$telefono."', HISTORIAL_MEDICO='" .$historial. "', CORREO='" .$correo. "', DOCUMENTACION='" .$documentacion. "', CLUB='" .$club. "'WHERE ID='".$id."';";
                    $query_update = mysqli_query($con,$sql);
 
                    // if user has been added successfully
                     if ($query_update) {
-                        $messages[] = "La cuenta ha sido modificada con éxito.";
+                        $messages[] = "Los Datos ha sido modificada con éxito.";
                     } else {
                         $errors[] = "Lo sentimos , el registro falló. Por favor, regrese y vuelva a intentarlo.";
                     }
