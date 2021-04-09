@@ -97,10 +97,10 @@
 				<div class="col-md-12">
 					<div class="pull-right">
 						<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">
-						 <span class="glyphicon glyphicon-search"></span> Armar Planilla
+						 <span class="glyphicon glyphicon-search"></span> Ingrese Jugadores
 						</button>
 						<button type="submit" class="btn btn-default">
-						  <span class="glyphicon glyphicon-print"></span> Imprimir
+						  <span class="glyphicon glyphicon-save"></span> Crear 
 						</button>
 					</div>	
 				</div>

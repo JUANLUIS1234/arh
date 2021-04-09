@@ -122,7 +122,7 @@
 					<tr>
 						<td><?php echo $id; ?></td>
 						<td><?php echo $descripcion ?></td>
-						<td>$<?php echo $monto; ?></td>
+						<td>$<?php echo number_format ($monto,2); ?></td>
 						<td ><?php echo $concepto; ?></td>
 						<td ><?php echo $periodo; ?></td>
 						<td><?php echo $date_added;?></td>
@@ -145,26 +145,7 @@
 			  </table>
 			  
 			</div>
-			<!--<div class="row container">
-					<div class="col-md-4">
-						<div class="form-group">
-							<label for="" >Total | Ingreso</label>
-							<input type="text" value="$<?php echo $sumar_ingresos; ?>" disabled="">
-						</div>
-					</div>	
-					<div class="col-md-4">
-						<div class="form-group">
-							<label for="" >Total | Egreso</label>
-							<input type="text" value="$<?php echo $sumar_egresos; ?>" disabled="">
-						</div>
-					</div>	
-					<div class="col-md-4">
-						<div class="form-group">
-							<label for="" >Total | Diferencia</label>
-							<input type="text" value="$<?php echo $control_registros; ?>" disabled="">
-						</div>
-					</div>	
-			  </div>-->
+			
 			<?php
 		}
 	}

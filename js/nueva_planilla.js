@@ -80,42 +80,4 @@
 		 VentanaCentrada('./pdf/documentos/factura_pdf.php?club='+club+'&id_vendedor='+id_vendedor+'&categoria='+categoria+'&torneo='+torneo,'Planilla','','1024','768','true');
 	 	});
 		
-		/* $( "#guardar_cliente" ).submit(function( event ) {
-		  $('#guardar_datos').attr("disabled", true);
-		  
-		 var parametros = $(this).serialize();
-			 $.ajax({
-					type: "POST",
-					url: "ajax/nuevo_cliente.php",
-					data: parametros,
-					 beforeSend: function(objeto){
-						$("#resultados_ajax").html("Mensaje: Cargando...");
-					  },
-					success: function(datos){
-					$("#resultados_ajax").html(datos);
-					$('#guardar_datos').attr("disabled", false);
-					load(1);
-				  }
-			});
-		  event.preventDefault();
-		})
-		
-		$( "#guardar_producto" ).submit(function( event ) {
-		  $('#guardar_datos').attr("disabled", true);
-		  
-		 var parametros = $(this).serialize();
-			 $.ajax({
-					type: "POST",
-					url: "ajax/nuevo_producto.php",
-					data: parametros,
-					 beforeSend: function(objeto){
-						$("#resultados_ajax_productos").html("Mensaje: Cargando...");
-					  },
-					success: function(datos){
-					$("#resultados_ajax_productos").html(datos);
-					$('#guardar_datos').attr("disabled", false);
-					load(1);
-				  }
-			});
-		  event.preventDefault();
-		})
+	

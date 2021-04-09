@@ -14,7 +14,7 @@
 	if($action == 'ajax'){
 		//escapar, además de eliminar todo lo que podría ser código (html / javascript-)
          $q = mysqli_real_escape_string($con,(strip_tags($_REQUEST['q'], ENT_QUOTES)));
-		 $aColumns = array('DNI', 'APELLIDO_Y_NOMBRE');//Columnas de busqueda
+		 $aColumns = array('dni','club');//Columnas de busqueda
 		 $sTable = "jugadores";
 		 $sWhere = "";
 		 $ano = date("Y");
@@ -41,7 +41,7 @@
 		$total_pages = ceil($numrows/$per_page);
 		$reload = './index.php';
 		//consulta principal para obtener los datos
-		$sql=("SELECT * FROM  $sTable WHERE apellido_y_nombre LIKE '%".$q."%'  AND club LIKE '%".$_SESSION['user_name']."%'  LIMIT $offset,$per_page");
+		$sql=("SELECT * FROM  $sTable WHERE dni LIKE '%".$q."%'  AND club LIKE '%".$_SESSION['user_name']."%'  LIMIT $offset,$per_page");
 		$query = mysqli_query($con, $sql);
 		//recorrer los datos obtenidos
 		if ($numrows>0){
@@ -53,7 +53,7 @@
 					<th>Dni</th>
 					<th>Jugador</th>
 					<th>Fecha Nac.</th>
-					<th>Edad.</th>
+					<th>Edad</th>
 					<th><span class="pull-right">Camiseta</span></th>
 					<th class='text-center' style="width: 36px;">Agregar</th>
 				</tr>

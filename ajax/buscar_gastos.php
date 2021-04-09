@@ -83,7 +83,7 @@
 					<tr>
 						<td><?php echo $id; ?></td>
 						<td><?php echo $descripcion ?></td>
-						<td>$<?php echo $monto; ?></td>
+						<td>$<?php echo number_format($monto,2);?></td>
 						<td ><?php echo $concepto; ?></td>
 						<td ><?php echo $periodo; ?></td>
 						<td ><?php echo $Año; ?></td>
@@ -102,19 +102,19 @@
 					<div class="col-md-3">
 						<div class="form-group">
 							<label style="font-size:24px" > Total | Ingreso</label>
-							<input type="text" value="$<?php echo $sumar_ingresos; ?>" disabled="" style="font-size:20px" class="text-center" >
+							<input type="text" value="$<?php echo number_format($sumar_ingresos,2); ?>" disabled="" style="font-size:20px" class="text-center" >
 						</div>
 					</div>	
 					<div class="col-md-3">
 						<div class="form-group">
 							<label style="font-size:24px"> Total | Egreso</label>
-							<input type="text" value="$<?php echo $sumar_egresos; ?>" disabled="" style="font-size:20px" class="text-center">
+							<input type="text" value="$<?php echo number_format($sumar_egresos,2); ?>" disabled="" style="font-size:20px" class="text-center">
 						</div>
 					</div>	
 					<div class="col-md-4">
 						<div class="form-group">
 							<label style="font-size:24px" > Total | Diferencia</label>
-							<input type="text" value="$<?php echo $control_registros; ?>" disabled="" style="font-size:20px" class="text-center">
+							<input type="text" value="$<?php echo number_format ($control_registros,2); ?>" disabled="" style="font-size:20px" class="text-center">
 						</div>
 					</div>	
 			  </div>

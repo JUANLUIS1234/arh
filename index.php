@@ -35,7 +35,7 @@
 		<h2><i></i> Bienvenidos a la <?php echo $row['impuesto']?></h2>
 		<?php endif; ?>
 		<?php if ($_SESSION['user_name']=='admin'):?>
-	<h2><i></i> Bienvenidos al Panel Administrativa</h2>
+	<h2><i></i> Bienvenidos al Panel Administrativo</h2>
 	<?php endif; ?>
 		</div>
 		

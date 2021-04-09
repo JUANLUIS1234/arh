@@ -22,7 +22,7 @@
 		// escaping, additionally removing everything that could be (html/javascript-) code
         
          $q = mysqli_real_escape_string($con,(strip_tags($_REQUEST['q'], ENT_QUOTES)));
-		 $aColumns = array('club','dni','apellido_y_nombre');//Columnas de busqueda
+		 $aColumns = array('dni');//Columnas de busqueda
 		 $sTable = "jugadores";
 		 $sWhere = "";
 		
@@ -50,7 +50,7 @@
 		$total_paginas = ceil($numrows/$per_page);
 		$reload = './jugadores.php';
 		//main query to fetch the data
-		$sql=("SELECT * FROM  $sTable WHERE apellido_y_nombre LIKE '%".$q."%'  AND club LIKE '%".$_SESSION['user_name']."%'  LIMIT $offset,$per_page");
+		$sql=("SELECT * FROM  $sTable WHERE dni LIKE '%".$q."%' AND club LIKE '%".$_SESSION['user_name']."%'  LIMIT $offset,$per_page");
 		$query = mysqli_query($con, $sql);
 		//loop through fetched data
 		
@@ -74,7 +74,7 @@
 						
 						$dni=$row['DNI'];
 						$jugador=$row['APELLIDO_Y_NOMBRE'];
-					$nacimiento=date('d/m/Y', strtotime($row['FECHA']));
+					    $nacimiento=$row['FECHA'];
 						$direccion=$row['DIRECCION'];
 						$telefono=$row['TELEFONO'];
 						$documentacion=$row['DOCUMENTACION'];

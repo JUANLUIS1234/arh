@@ -39,9 +39,9 @@
 				<form class="form-horizontal" role="form" id="datos_jugadores">
 				
 						<div class="form-group row">
-							<label for="q" class="col-md-2 control-label">Apellido</label>
+							<label for="q" class="col-md-2 control-label">Ingrese DNI</label>
 							<div class="col-md-5">
-								<input type="text" class="form-control" id="q"  placeholder="Apellido" onkeyup='load(1);'>
+								<input type="text" class="form-control" id="q"  placeholder="Ingrese DNI" onkeyup='load(1);'>
 							</div>
 							
 							

@@ -6,7 +6,7 @@ $query_empresa=mysqli_query($con,"select * from perfil where id_perfil=1");
 <div class="navbar navbar-default navbar-fixed-bottom">
     <div class="container">
       <p class="navbar-text pull-left">&copy <?php echo date('d-m-Y');?> - Jbzeus 
-           <a href="#" target="_blank" style="color: #ecf0f1"><?php echo $row['nombre_empresa']?>" <?php echo $row['impuesto']?> </a>
+           <a href="#" target="_blank" style="color: #ecf0f1"> Todos los Derechos Reservados </a>
       </p>
    </div>
 </div>

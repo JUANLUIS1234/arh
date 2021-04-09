@@ -19,7 +19,7 @@
 		// escaping, additionally removing everything that could be (html/javascript-) code
          
          $q = mysqli_real_escape_string($con,(strip_tags($_REQUEST['q'], ENT_QUOTES)));
-		 $aColumns = array('contribuyente');//Columnas de busqueda
+		 $aColumns = array('dni');//Columnas de busqueda
 		 $sTable = "fichajes";
 		 $sWhere = "";
 		
@@ -47,7 +47,7 @@
 		$total_paginas = ceil($numrows/$per_page);
 		$reload = './fichajes.php';
 		//main query to fetch the data
-		$sql=("SELECT * FROM  $sTable WHERE contribuyente LIKE '%".$q."%'  AND club LIKE '%".$_SESSION['user_name']."%'  LIMIT $offset,$per_page");
+		$sql=("SELECT * FROM  $sTable WHERE dni LIKE '%".$q."%' AND club LIKE '%".$_SESSION['user_name']."%'  LIMIT $offset,$per_page");
 		$query = mysqli_query($con, $sql);
 		//loop through fetched data
 		
@@ -93,7 +93,7 @@
 						<td class='text-tight'><?php echo $jugador;?></td>
 						<td class='text-tight'><?php echo $club;?></td>
 						<td class='text-tight'><?php echo $cuota;?></td>
-						<td class='text-tight'><?php echo $monto;?></td>
+						<td class='text-tight'><?php echo number_format($monto,2);?></td>
 						<td class='text-tight'><?php echo $ano;?></td>
 						<td><span class="label <?php echo $label_class;?>"><?php echo $text_estado; ?></span></td>
 						

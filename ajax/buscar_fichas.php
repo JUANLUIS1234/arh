@@ -137,7 +137,7 @@
 						<td class='text-tight'><?php echo $jugador;?></td>
 						<td class='text-tight'><?php echo $club;?></td>
 						<td class='text-tight'><?php echo $cuota;?></td>
-						<td class='text-tight'>$<?php echo $monto;?></td>
+						<td class='text-tight'>$<?php echo number_format($monto,2);?></td>
 						<td class='text-tight'><?php echo $periodo;?></td>
 						<td class='text-tight'><?php echo $fecha;?></td>
 						<td class='text-tight'><?php echo $ano;?></td>

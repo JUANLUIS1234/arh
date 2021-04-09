@@ -38,7 +38,7 @@ if (version_compare(PHP_VERSION, '5.3.7', '<')) {
               
 					
                	// Escribe el nuevo registro
-                    $sql = "INSERT INTO registro (DESCRIPCION, MONTO, FECHA, PERIODO, AÑO, CONCEPTO, USUARIO)
+                    $sql = "INSERT INTO registros (DESCRIPCION, MONTO, FECHA, PERIODO, AÑO, CONCEPTO, USUARIO)
                             VALUES('".$Descripcion."','".$Monto."','" . $fecha . "', '" . $Periodo . "', '" . $ano . "','".$Concepto."','" . $user . "');";
                     $query_new_registro_insert = mysqli_query($con,$sql);
 
