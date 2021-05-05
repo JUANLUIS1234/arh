@@ -72,12 +72,12 @@
 		
 		$("#datos_planilla").submit(function(){
 		  var club = $("#club").val();
-		  var id_vendedor = $("#id_vendedor").val();
+		  var user_id = $("#user_id").val();
 		  var categoria = $("#categoria").val();
 		  var torneo = $("#torneo").val();
 		  
 		  
-		 VentanaCentrada('./pdf/documentos/factura_pdf.php?club='+club+'&id_vendedor='+id_vendedor+'&categoria='+categoria+'&torneo='+torneo,'Planilla','','1024','768','true');
+		 VentanaCentrada('./pdf/documentos/planilla_pdf.php?club='+club+'&user_id='+user_id+'&categoria='+categoria+'&torneo='+torneo,'Planilla','','1024','768','true');
 	 	});
 		
 	

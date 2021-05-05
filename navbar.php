@@ -35,6 +35,7 @@ $query_empresa=mysqli_query($con,"select * from perfil where id_perfil=1");
         <li class="<?php echo $active_Jugadores;?>"><a href="jugadores.php"><i class='glyphicon glyphicon-user'></i> Jugadores <span class="sr-only">(current)</span></a></li>
         <li class="<?php echo $active_fichajes;?>"><a href="fichajes.php"><i class='glyphicon glyphicon-barcode'></i> Fichajes </a></li>
         <li class="<?php echo $active_planilla;?>"><a href="planilla.php"><i class='glyphicon glyphicon-edit'></i> Carga de Planilla</a></li>
+        <li class="<?php echo $active_miplanilla;?>"><a href="listarplanilla.php"><i class='glyphicon glyphicon-edit'></i> Mis Planillas</a></li>
        <?php endif;  ?>
         <!--PERMISO A LOS USUARIOS QUE SON ADMINISTRADORES-->
         <?php if ($_SESSION['user_name']=='admin'):?> 

@@ -32,7 +32,7 @@ if (version_compare(PHP_VERSION, '5.3.7', '<')) {
 			require_once ("../config/conexion.php");//Contiene funcion que conecta a la base de datos
 			
 				// escaping, additionally removing everything that could be (html/javascript-) code
-                 $Factura = mysqli_real_escape_string($con,(strip_tags($_POST["factura"],ENT_QUOTES)));
+                $Factura = mysqli_real_escape_string($con,(strip_tags($_POST["factura"],ENT_QUOTES)));
                 $Descripcion = mysqli_real_escape_string($con,(strip_tags($_POST["descripcion"],ENT_QUOTES)));
 				$Monto = mysqli_real_escape_string($con,(strip_tags($_POST["monto"],ENT_QUOTES)));
 				$Concepto = mysqli_real_escape_string($con,(strip_tags($_POST["concepto"],ENT_QUOTES)));

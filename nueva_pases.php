@@ -48,13 +48,13 @@
 							<div class="col-md-3">
 								<input type="text" class="form-control input-sm" id="nombre_jugador" name="nombre_jugador" placeholder="Nombre y Apellido" readonly>
 							</div>
-					<label for="origen" class="col-md-1 control-label">Club Origen</label>
+					<label for="origen" class="col-md-1 control-label">Origen</label>
 							<div class="col-md-3">
 								<input type="text" class="form-control input-sm" id="origen" name="origen" placeholder="CLUB" readonly>
 							</div>
 				 </div>
 						<div class="form-group row">
-							<label for="destino" class="col-md-1 control-label">Club Destino</label>
+							<label for="destino" class="col-md-1 control-label">Destino</label>
 							<div class="col-md-3">
 								<select class="form-control input-sm" id="destino" name="destino">
 									<?php

@@ -4,10 +4,13 @@
 	Web: obedalvarado.pw
 	Mail: info@obedalvarado.pw
 	---------------------------*/
+	date_default_timezone_set('America/Argentina/La_Rioja');
+    setlocale(LC_TIME, 'es');
 	session_start();
 	if (!isset($_SESSION['user_login_status']) AND $_SESSION['user_login_status'] != 1) {
         header("location: ../../login.php");
 		exit;
+		
     }
 	
 	
@@ -21,7 +24,7 @@
 	$count=mysqli_num_rows($sql_count);
 	if ($count==0)
 	{
-	echo "<script>alert('No hay Jugadores Agregado a la Planilla')</script>";
+	echo "<script>alert('No hay productos agregados a la factura')</script>";
 	echo "<script>window.close();</script>";
 	exit;
 	}
@@ -29,9 +32,9 @@
 	require_once(dirname(__FILE__).'/../html2pdf.class.php');
 		
 	//Variables por GET
-	$club=intval($_GET['club']);
-	$id_vendedor=intval($_GET['id_vendedor']);
-	$categoria=mysqli_real_escape_string($con,(strip_tags($_REQUEST['categoria'], ENT_QUOTES)));
+	
+	$user_id=intval($_GET['user_id']);
+	
 
 	//Fin de variables por GET
 	$sql=mysqli_query($con, "select LAST_INSERT_ID(num_planilla) as last from planilla order by id_planilla desc limit 0,1 ");

@@ -35,16 +35,16 @@
 			include("modal/buscar_jugador.php");
 			
 		?>
-			<form class="form-horizontal" role="form" id="datos_planilla">
+			<form class="form-horizontal" method="post" role="form" id="datos_planilla" name="datos_planilla">
 				<div class="form-group row">
 				  <label for="nombre_cliente" class="col-md-1 control-label">Club</label>
 				  <div class="col-md-3">
-					  <input type="text" class="form-control input-sm" id="club" placeholder="Club" readonly="" value="<?php echo($_SESSION['user_name']);?>">
+					  <input type="text" class="form-control input-sm" id="club" name="club" placeholder="Club" readonly="" value="<?php echo($_SESSION['user_name']);?>">
 					  
 				  </div>
 				  <label for="torneo" class="col-md-1 control-label">Torneo</label>
 							<div class="col-md-3">
-								<select class='form-control input-sm' id="torneo">
+								<select class='form-control input-sm' id="torneo" name="torneo">
 									<option value="1">Apertura</option>
 									<option value="2">Clausura</option>
 									<option value="3">Anual</option>
@@ -56,20 +56,20 @@
 						<div class="form-group row">
 							<label for="empresa" class="col-md-1 control-label">Entrenador</label>
 							<div class="col-md-3">
-							<select class="form-control input-sm" id="id_vendedor">
+							<select class="form-control input-sm" id="user_id">
 									<?php
 									  session_start();
 										$sql_vendedor=mysqli_query($con,"SELECT * FROM users WHERE user_name LIKE '%".$_SESSION['user_name']."%'");
 										if ($rw=mysqli_fetch_array($sql_vendedor)){
-											$id_vendedor=$rw["user_id"];
+											$user_id=$rw["user_id"];
 											$nombre_vendedor=$rw["firstname"]." ".$rw["lastname"];
-											if ($id_vendedor==$_SESSION['user_id']){
+											if ($user_id==$_SESSION['user_id']){
 												$selected="selected";
 											} else {
 												$selected="";
 											}
 											?>
-											<option value="<?php echo $id_vendedor?>" <?php echo $selected;?>><?php echo $nombre_vendedor?></option>
+											<option value="<?php echo $user_id?>" <?php echo $selected;?>><?php echo $nombre_vendedor?></option>
 											<?php
 										}
 									?>
@@ -81,7 +81,7 @@
 							</div>
 							<label for="categoria" class="col-md-1 control-label">Categoria</label>
 							<div class="col-md-3">
-								<select class='form-control input-sm' id="categoria">
+								<select class='form-control input-sm' id="categoria" name="categoria">
 									<option value="1">1-Caballeros</option>
 									<option value="2">1-Damas</option>
 									<option value="3">Sub 19 </option>
@@ -99,8 +99,8 @@
 						<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">
 						 <span class="glyphicon glyphicon-search"></span> Ingrese Jugadores
 						</button>
-						<button type="submit" class="btn btn-default">
-						  <span class="glyphicon glyphicon-save"></span> Crear 
+						<button type="submit" class="btn btn-default" id="guardar_datos">
+						  <span class="glyphicon glyphicon-file"></span> Crear 
 						</button>
 					</div>	
 				</div>

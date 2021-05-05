@@ -76,7 +76,8 @@
 						<td class='col-xs-1'>
 						<div class="pull-right">
 						<input  type="text" class="form-control"style="text-align:right" value= "1"  id="camiseta_<?php echo $dni; ?>">
-						</div></td>
+						</div>
+						</td>
 						
 						<td class='text-center'><a class='btn btn-info'href="#" onclick="agregar('<?php echo $dni ?>')"><i class="glyphicon glyphicon-plus"></i></a></td>
 					</tr>
